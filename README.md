@@ -7,6 +7,7 @@ Pre-Junior framework and course tasks to get an overview of what JS is and how a
 * You should have any git client installed
 * NodeJS 20 or higher
 * VSCode
+* Vladyslav Kobal - Unit-1
 
 ## Setup
 
