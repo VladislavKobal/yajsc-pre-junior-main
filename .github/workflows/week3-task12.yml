@@ -1,0 +1,15 @@
+name: Week 3 - Task 12
+
+run-name: Running test for week 3 and task 12
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/tests/week3_tasks/12-inventory-page/**.js'
+jobs:
+  week3-task12:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test-12'

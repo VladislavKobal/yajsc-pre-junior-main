@@ -1,0 +1,40 @@
+{
+  "name": "yajsc-pre-junior",
+  "version": "1.0.0",
+  "description": "Pre-Junior framework and course tasks",
+  "scripts": {
+    "eslint-fix": "eslint . --fix",
+    "report": "npx playwright show-report",
+    "test-0": "npx playwright test src/tests/week1_tasks/0-initial.spec.js",
+    "test-1": "npx playwright test src/tests/week2_tasks/1-variables-strings.spec.js",
+    "test-2": "npx playwright test src/tests/week2_tasks/2-variables-numbers.spec.js",
+    "test-3": "npx playwright test src/tests/week2_tasks/3-variables-objects.spec.js",
+    "test-4-5": "npx playwright test src/tests/week2_tasks/4-5-variables-arrays.spec.js",
+    "test-6": "npx playwright test src/tests/week2_tasks/6-boolean-conditions.spec.js",
+    "test-7": "npx playwright test src/tests/week2_tasks/7-function.spec.js",
+    "test-8": "npx playwright test src/tests/week3_tasks/8-loops-and-strings.spec.js",
+    "test-9": "npx playwright test src/tests/week3_tasks/9-function-returns-number.spec.js",
+    "test-10": "npx playwright test src/tests/week3_tasks/10-function-returns-array-and-for-of.spec.js",
+    "test-11": "npx playwright test src/tests/week3_tasks/11-login-page/11-login-page.spec.js",
+    "test-12": "npx playwright test src/tests/week3_tasks/12-inventory-page/12-inventory-page.spec.js",
+    "test-13": "npx playwright test src/tests/week3_tasks/13-15-inventory-page/13-function-returns-array-and-for-of.spec.js",
+    "test-14": "npx playwright test src/tests/week3_tasks/13-15-inventory-page/14-forEach-method.spec.js",
+    "test-15": "npx playwright test src/tests/week3_tasks/13-15-inventory-page/15-without-forEach-method.spec.js",
+    "test-all": "npx playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "aqa",
+    "test automation",
+    "learn js automation"
+  ],
+  "author": "ov.artem90@gmail.com",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@playwright/test": "^1.56.1",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@types/node": "^24.9.1",
+    "eslint": "^9.38.0"
+  }
+}

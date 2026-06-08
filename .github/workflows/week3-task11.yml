@@ -1,0 +1,15 @@
+name: Week 3 - Task 11
+
+run-name: Running test for week 3 and task 11
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/tests/week3_tasks/11-login-page/**.js'
+jobs:
+  week3-task11:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test-11'

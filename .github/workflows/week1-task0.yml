@@ -1,0 +1,15 @@
+name: Week 1 - Task 0
+
+run-name: Running test for week 1 and task 0
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/tests/week1_tasks/0*.js'
+jobs:
+  week1-task0:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      npm-command: 'test-0'
