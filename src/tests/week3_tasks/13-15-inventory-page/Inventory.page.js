@@ -19,6 +19,7 @@ export class InventoryPage {
    * 2. return `actualProductsNames`
    */
   async getProductsNames() {
-    // enter you code here
+    const actualProductsNames = await this.itemsElements.allTextContents();
+    return actualProductsNames;
   }
 }

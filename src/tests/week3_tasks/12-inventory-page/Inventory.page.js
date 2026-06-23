@@ -12,7 +12,7 @@ export class InventoryPage {
    * 2. return `quantity`;
    */
   async getNumberOfItemsOnPage() {
-    // enter your code here
+    const quantity = await this.itemsElements.count();
   }
 }
 

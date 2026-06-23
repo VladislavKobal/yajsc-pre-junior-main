@@ -23,7 +23,14 @@ test('[YAJSC-8] should contain all items names on the page (with loops)', async 
    * e.g. 'Sauce Labs Backpack', 'Sauce Labs Fleece Jacket', and all others
    */
   // write your code below this line
-
+  const expectedItemsNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)',
+  ];
   await page.goto('https://www.saucedemo.com/');
   await performLogin(page, userCredentials.username, userCredentials.password);
 
@@ -36,8 +43,8 @@ test('[YAJSC-8] should contain all items names on the page (with loops)', async 
    * Fix below `for` loop
    * it should iterate over array of `productElements` using `i` variable starting from 0 to the `numberOfProductElements`
    */
-  for (let i/* enter necessary code here */; i/* enter necessary code here */; i/* enter necessary code here */) {
-    // (NL): Gets text for i-th element with selector `'[data-test="inventory-item-name"]'`
+  for (let i = 0; i < numberOfProductElements; i++) {
+    
     const actualProduct = await productNameElements.nth(i).textContent();
     expect(actualProduct, `Displayed item [${i}] name is not correct`).toEqual(expectedItemsNames[i]);
   }

@@ -31,8 +31,8 @@ test('[YAJSC-14] should display all products (with pages and forEach method)', a
    * Fix below code by implementing proper usage of `forEach` method
    * Inside `forEach` method use `expectedProduct` as a name of the element in `expectedItemsNames` array
    */
-  expectedItemsNames.forEach((/* remove this comment - put `expectedProduct` variable here */) => {
-    expect(actualProductsNames, 'Item info is not correct').toContain(/* remove this comment - put `expectedProduct` variable here */);
+  expectedItemsNames.forEach((expectedProduct) => {
+    expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
   });
 });
 

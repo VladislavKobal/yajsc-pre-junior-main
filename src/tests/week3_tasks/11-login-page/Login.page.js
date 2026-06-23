@@ -14,7 +14,8 @@ export class LoginPage {
    */
   async performLogin(username, password) {
     await this.usernameElement.fill(username);
-    // enter your code here
+    await this.passwordElement.fill(password);
+    await this.loginButtonElement.click();
   };
 }
 
