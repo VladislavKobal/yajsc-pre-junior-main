@@ -31,5 +31,5 @@ test('[YAJSC-15] should display all products (with pages and allTextContents met
    * Fix below code by using `toEqual` method to compare 2 arrays: `actualProductsNames` and `expectedItemsNames`
    * https://playwright.dev/docs/api/class-genericassertions#generic-assertions-to-equal
    */
-  expect(actualProductsNames, 'Items names are not correct')./* remove this comment - put `toEqual` with `expectedItemsNames` variable here */;
+  expect(actualProductsNames, 'Items names are not correct').toEqual(expectedItemsNames);
 });

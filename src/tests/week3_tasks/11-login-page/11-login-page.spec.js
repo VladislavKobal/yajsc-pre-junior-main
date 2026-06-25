@@ -6,7 +6,7 @@ test('[YAJSC-11] should login successfully (with login page)', async ({ page }) 
    * Task 11:
    * Fix below code by adding `page` as an argument of `LoginPage` constructor
    */
-  const loginPage = new LoginPage(/* remove this comment - put `page` here */);
+  const loginPage = new LoginPage(page);
 
   const userCredentials = {
     username: 'standard_user',
@@ -25,7 +25,7 @@ test('[YAJSC-11] should login successfully (with login page)', async ({ page }) 
    * Fix below code by providing username and password as an arguments of `loginPage.performLogin` method
    * Use `userCredentials` object to get `username` and `password` properties
    */
-  await loginPage.performLogin(/* remove this comment - and provide username and password */);
+  await loginPage.performLogin(userCredentials.username, userCredentials.password);
 
   await expect(page.locator('.title'), 'Inventory Page Title is not visible')
     .toBeVisible();

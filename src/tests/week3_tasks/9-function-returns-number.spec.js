@@ -21,7 +21,9 @@ const performLogin = async (page, username, password) => {
  * hint: you can copy the code from any previous test
  */
 const getNumberOfProductNameElements = async (page) => {
-  // enter your code here
+  const productNameElements = page.locator('[data-test="inventory-item-name"]');
+  const numberOfProductElements = await productNameElements.count();
+  return numberOfProductElements;
 };
 
 test('[YAJSC-9] should contain all items names on the page (with function returning number)', async ({ page }) => {

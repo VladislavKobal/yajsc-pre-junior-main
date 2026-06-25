@@ -32,14 +32,16 @@ const getNumberOfProductNameElements = async (page) => {
  * hint: you can copy the code from any previous test
  */
 const getProductsNames = async (page) => {
-  // enter you code here
+  const productNameElements = page.locator('[data-test="inventory-item-name"]');
+  const numberOfProductElements = await getNumberOfProductNameElements(page);
+  const actualProductsNames = [];
 
-  for (let i/* enter necessary code here */; i/* enter necessary code here */; i/* enter necessary code here */) {
+  for (let i = 0; i < numberOfProductElements; i++) {
     actualProductsNames.push(await productNameElements.nth(i).textContent());
   }
 
-  // enter you code here
-}
+  return actualProductsNames;
+};
 
 test('[YAJSC-10] should display all products (with function returning array)', async ({ page }) => {
   const userCredentials = {
@@ -68,8 +70,8 @@ test('[YAJSC-10] should display all products (with function returning array)', a
    * Fix below `for-of` loop
    * It should iterate over array of `expectedItemsNames` getting `expectedProduct` element
    */
-  for (let expectedProduct /* enter necessary code here */) {
-    expect(actualProductsNames, 'Item info is not correct').toContain(/* remove this comment - put variable `expectedProduct` here */);
+  for (let expectedProduct of expectedItemsNames) {
+    expect(actualProductsNames, 'Item info is not correct').toContain(expectedProduct);
   }
 });
 
